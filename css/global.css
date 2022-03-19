@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #7f7f7f;
+  --color-dark-gray: #373737;
+  --color-light-green: #53cf6f;
+  --color-green: #33b864;
+  --color-blue: #6d96ff;
+  --color-yellow: #fbaf01;
+  --color-yellow-transparent: rgba(251, 175, 1, 0.4);
+  --color-red: #d34a4a;
+}
+
+.page {
+  display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Better version of the mobile version of Pronote"
+    />
+    <!-- Title, Manifest & Favicon -->
+    <title>Pronote Revamp</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="assets/source.png" type="image/png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css" />
+    <!-- Brain of the app :D -->
+    <script defer src="scripts/authentication.js"></script>
+  </head>
+  <body>
+    <div id="login-page" class="page">
+      <link rel="stylesheet" href="css/pages/login.css" />
+      <h1>Pronote</h1>
+      <p>
+        It’s like the default Pronote app, but cooler :D<br />Please login using
+        your credentials:
+      </p>
+      <form onsubmit="signIn(event);">
+        <input
+          type="text"
+          id="login-username"
+          autocomplete="username"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          id="login-password"
+          autocomplete="current-password"
+          placeholder="Password"
+        />
+        <input type="submit" value="Sign In" />
+      </form>
+      <div id="credits">
+        <div id="github">
+          <img src="assets/images/github.png" alt="GitHub" height="25" />
+          <a href="https://github.com/RichardDorian" target="_blank">GitHub</a>
+        </div>
+        <p>Coded and maintained<br />by RichardDorian</p>
+      </div>
+    </div>
+    <div id="main-menu-page" class="page">
+      <h1>Pronote</h1>
+    </div>
+    <div id="timetable-page" class="page"></div>
+    <div id="homework-page" class="page"></div>
+    <div id="grades-page" class="page"></div>
+    <div id="menu-page" class="page"></div>
+    <div id="teachers-page" class="page"></div>
+  </body>
+</html>

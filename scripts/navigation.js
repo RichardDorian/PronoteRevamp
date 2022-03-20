@@ -35,3 +35,12 @@ if (!authenticated) {
 } else {
   showPage(pages.mainMenu);
 }
+
+// Show screen corresponding to the query string
+const parsedQuery = new URLSearchParams(window.location.search);
+const pageQuery = parsedQuery.get('page');
+if (pageQuery) {
+  const page = pages[pageQuery];
+  if (page) showPage(page);
+  else console.warn('Unknown page query', pageQuery);
+}

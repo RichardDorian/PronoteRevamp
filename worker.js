@@ -6,7 +6,7 @@ self.addEventListener('install', () => self.skipWaiting());
  * @param {FetchEvent} event Event that triggered the function
  */
 function fetchCallback(event) {
-  console.log(event);
+  // console.log(event);
 }
 
 self.addEventListener('fetch', fetchCallback);

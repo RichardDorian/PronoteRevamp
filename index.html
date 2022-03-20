@@ -19,7 +19,7 @@
     <script defer src="scripts/language.js"></script>
     <script defer src="scripts/authentication.js"></script>
     <script defer src="scripts/navigation.js"></script>
-    <script defer src="scripts/pwa/register.js"></script>
+    <script defer src="scripts/pwa.js"></script>
   </head>
   <body>
     <!-- Components used in more than one page -->
@@ -80,26 +80,31 @@
             img-src="assets/images/timetable.png"
             value="Timetable"
             data-lang="mainmenu-value-timetable"
+            onclick="showPage(pages.timetable)"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/homework.png"
             value="Homework"
             data-lang="mainmenu-value-homework"
+            onclick="showPage(pages.homework)"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/grades.png"
             value="Grades"
             data-lang="mainmenu-value-grades"
+            onclick="showPage(pages.grades)"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/menu.png"
             value="Menu"
             data-lang="mainmenu-value-menu"
+            onclick="showPage(pages.menu)"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/teachers.png"
             value="Teachers"
             data-lang="mainmenu-value-teachers"
+            onclick="showPage(pages.teachers)"
           ></main-menu-item>
         </div>
       </div>
@@ -107,10 +112,20 @@
     <div id="settings-page" class="page">
       <sub-menu-header data-lang="settings-value-title"></sub-menu-header>
     </div>
-    <div id="timetable-page" class="page"></div>
-    <div id="homework-page" class="page"></div>
-    <div id="grades-page" class="page"></div>
-    <div id="menu-page" class="page"></div>
-    <div id="teachers-page" class="page"></div>
+    <div id="timetable-page" class="page">
+      <sub-menu-header data-lang="timetable-value-title"></sub-menu-header>
+    </div>
+    <div id="homework-page" class="page">
+      <sub-menu-header data-lang="homework-value-title"></sub-menu-header>
+    </div>
+    <div id="grades-page" class="page">
+      <sub-menu-header data-lang="grades-value-title"></sub-menu-header>
+    </div>
+    <div id="menu-page" class="page">
+      <sub-menu-header data-lang="menu-value-title"></sub-menu-header>
+    </div>
+    <div id="teachers-page" class="page">
+      <sub-menu-header data-lang="teachers-value-title"></sub-menu-header>
+    </div>
   </body>
 </html>

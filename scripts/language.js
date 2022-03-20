@@ -16,6 +16,11 @@ const translations = {
     'mainmenu-value-menu': 'Menu',
     'mainmenu-value-teachers': 'Teachers',
     'settings-value-title': 'Settings',
+    'timetable-value-title': 'Timetable',
+    'homework-value-title': 'Homework',
+    'grades-value-title': 'Grades',
+    'menu-value-title': 'Menu',
+    'teachers-value-title': 'Teachers',
   },
   fr: {
     'login-text-description':
@@ -31,6 +36,11 @@ const translations = {
     'mainmenu-value-menu': 'Menu',
     'mainmenu-value-teachers': 'Enseignants',
     'settings-value-title': 'Paramètres',
+    'timetable-value-title': 'E.D.T.',
+    'homework-value-title': 'Devoirs',
+    'grades-value-title': 'Notes',
+    'menu-value-title': 'Menu',
+    'teachers-value-title': 'Enseignants',
   },
   es: {
     'login-text-description':
@@ -46,6 +56,11 @@ const translations = {
     'mainmenu-value-menu': 'Menú',
     'mainmenu-value-teachers': 'Profesores',
     'settings-value-title': 'Ajustes',
+    'timetable-value-title': 'Horario',
+    'homework-value-title': 'Tareas',
+    'grades-value-title': 'Notas',
+    'menu-value-title': 'Menú',
+    'teachers-value-title': 'Profesores',
   },
 };
 

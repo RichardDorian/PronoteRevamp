@@ -1,0 +1,23 @@
+.container {
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 4px 20px var(--color-black-transparent);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container > img {
+  height: 96px;
+  width: 96px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container > h2 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}

@@ -54,7 +54,40 @@
       </div>
     </div>
     <div id="main-menu-page" class="page">
-      <h1>Pronote</h1>
+      <link rel="stylesheet" href="css/pages/mainMenu.css" />
+      <script defer src="scripts/pages/mainMenu.js"></script>
+      <div id="header">
+        <h2>
+          Hi, <span id="username"></span>
+          <img src="assets/images/hello.png" alt="Hello" height="30" />
+        </h2>
+        <img src="assets/images/settings.png" alt="Settings" height="40" />
+      </div>
+      <div id="content">
+        <h1>Main Menu</h1>
+        <div id="buttons">
+          <main-menu-item
+            img-src="assets/images/timetable.png"
+            text="Timetable"
+          ></main-menu-item>
+          <main-menu-item
+            img-src="assets/images/homework.png"
+            text="Homework"
+          ></main-menu-item>
+          <main-menu-item
+            img-src="assets/images/grades.png"
+            text="Grades"
+          ></main-menu-item>
+          <main-menu-item
+            img-src="assets/images/menu.png"
+            text="Menu"
+          ></main-menu-item>
+          <main-menu-item
+            img-src="assets/images/teachers.png"
+            text="Teachers"
+          ></main-menu-item>
+        </div>
+      </div>
     </div>
     <div id="timetable-page" class="page"></div>
     <div id="homework-page" class="page"></div>

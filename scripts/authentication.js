@@ -4,11 +4,15 @@ const authenticated =
   localStorage.getItem('password') !== null;
 
 // Show the authentication form if the user is not authenticated
-const loginPage = document.getElementById('login-page');
 if (!authenticated) {
+  const loginPage = document.getElementById('login-page');
   loginPage.style.display = 'block';
   console.debug('User is not authenticated, showing login page');
-} else console.debug('User is already authenticated, skipping login page');
+} else {
+  const mainMenuPage = document.getElementById('main-menu-page');
+  mainMenuPage.style.display = 'block';
+  console.debug('User is already authenticated, skipping login page');
+}
 
 /**
  * Sign In using the given credentials

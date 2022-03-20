@@ -18,8 +18,12 @@
     <!-- Brain of the app :D -->
     <script defer src="scripts/language.js"></script>
     <script defer src="scripts/authentication.js"></script>
+    <script defer src="scripts/navigation.js"></script>
   </head>
   <body>
+    <!-- Components used in more than one page -->
+    <script src="scripts/components/SubMenuHeader.js"></script>
+    <!-- Pages -->
     <div id="login-page" class="page">
       <link rel="stylesheet" href="css/pages/login.css" />
       <h1>Pronote</h1>
@@ -61,7 +65,12 @@
           <span id="username"></span>
           <img src="assets/images/hello.png" alt="Hello" height="30" />
         </h2>
-        <img src="assets/images/settings.png" alt="Settings" height="40" />
+        <img
+          src="assets/images/settings.png"
+          alt="Settings"
+          height="40"
+          onclick="showPage(pages.settings)"
+        />
       </div>
       <div id="content">
         <h1 data-lang="mainmenu-text-main-menu">Main Menu</h1>
@@ -94,7 +103,9 @@
         </div>
       </div>
     </div>
-    <div id="settings-page" class="page"></div>
+    <div id="settings-page" class="page">
+      <sub-menu-header data-lang="settings-value-title"></sub-menu-header>
+    </div>
     <div id="timetable-page" class="page"></div>
     <div id="homework-page" class="page"></div>
     <div id="grades-page" class="page"></div>

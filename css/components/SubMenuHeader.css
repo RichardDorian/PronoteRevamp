@@ -1,0 +1,17 @@
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  position: fixed;
+  left: 20px;
+}

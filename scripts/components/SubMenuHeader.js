@@ -1,24 +1,16 @@
-// Add current username to the hello text
-const username = localStorage.getItem('username');
-const helloText = document.getElementById('username');
-helloText.innerText = username;
-
-// Main Menu Item Component
-class MainMenuItem extends HTMLElement {
-  imgSrc = 'assets/images/hello.png';
-  value = 'Button';
+// Sub Menu Header Component
+class SubMenuHeader extends HTMLElement {
+  value = 'Sub Menu';
 
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });
-  }
 
-  connectedCallback() {
     this.render();
   }
 
   static get observedAttributes() {
-    return ['img-src', 'value'];
+    return ['value'];
   }
 
   /**
@@ -29,9 +21,6 @@ class MainMenuItem extends HTMLElement {
    */
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
-      case 'img-src':
-        this.imgSrc = newValue;
-        break;
       case 'value':
         this.value = newValue;
         break;
@@ -49,14 +38,14 @@ class MainMenuItem extends HTMLElement {
   render() {
     this.root.innerHTML = `
       <style>
-        @import url(css/components/MainMenuItem.css);
+        @import url(css/components/SubMenuHeader.css);
       </style>
-      <div class="container">
-        <img src="${this.imgSrc}" alt="${this.title}" />
-        <h2>${this.value}</h2>
+      <div>
+        <img src="assets/images/back.png" height="40" onclick="showPage(pages.mainMenu)">
+        <h1>${this.value}</h1>
       </div>
     `;
   }
 }
 
-customElements.define('main-menu-item', MainMenuItem);
+customElements.define('sub-menu-header', SubMenuHeader);

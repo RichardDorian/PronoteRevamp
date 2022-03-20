@@ -3,17 +3,6 @@ const authenticated =
   localStorage.getItem('username') !== null &&
   localStorage.getItem('password') !== null;
 
-// Show the authentication form if the user is not authenticated
-if (!authenticated) {
-  const loginPage = document.getElementById('login-page');
-  loginPage.style.display = 'block';
-  console.debug('User is not authenticated, showing login page');
-} else {
-  const mainMenuPage = document.getElementById('main-menu-page');
-  mainMenuPage.style.display = 'block';
-  console.debug('User is already authenticated, skipping login page');
-}
-
 /**
  * Sign In using the given credentials
  * @param {SubmitEvent} event Event that triggered the function
@@ -38,5 +27,6 @@ function signIn(event) {
 
   localStorage.setItem('username', username);
   localStorage.setItem('password', password);
+
   window.location.reload();
 }

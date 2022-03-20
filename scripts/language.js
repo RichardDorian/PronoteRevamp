@@ -15,6 +15,7 @@ const translations = {
     'mainmenu-value-grades': 'Grades',
     'mainmenu-value-menu': 'Menu',
     'mainmenu-value-teachers': 'Teachers',
+    'settings-value-title': 'Settings',
   },
   fr: {
     'login-text-description':
@@ -29,6 +30,7 @@ const translations = {
     'mainmenu-value-grades': 'Notes',
     'mainmenu-value-menu': 'Menu',
     'mainmenu-value-teachers': 'Enseignants',
+    'settings-value-title': 'Paramètres',
   },
   es: {
     'login-text-description':
@@ -43,6 +45,7 @@ const translations = {
     'mainmenu-value-grades': 'Notas',
     'mainmenu-value-menu': 'Menú',
     'mainmenu-value-teachers': 'Profesores',
+    'settings-value-title': 'Ajustes',
   },
 };
 

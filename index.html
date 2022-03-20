@@ -16,30 +16,28 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css" />
     <!-- Brain of the app :D -->
+    <script defer src="scripts/language.js"></script>
     <script defer src="scripts/authentication.js"></script>
   </head>
   <body>
     <div id="login-page" class="page">
       <link rel="stylesheet" href="css/pages/login.css" />
       <h1>Pronote</h1>
-      <p>
-        It’s like the default Pronote app, but cooler :D<br />Please login using
-        your credentials:
-      </p>
+      <p data-lang="login-text-description"></p>
       <form onsubmit="signIn(event);">
         <input
           type="text"
           id="login-username"
           autocomplete="username"
-          placeholder="Username"
+          data-lang="login-placeholder-username"
         />
         <input
           type="password"
           id="login-password"
           autocomplete="current-password"
-          placeholder="Password"
+          data-lang="login-placeholder-password"
         />
-        <input type="submit" value="Sign In" />
+        <input type="submit" value="Sign In" data-lang="login-value-sign-in" />
       </form>
       <div id="credits">
         <div id="github">
@@ -51,45 +49,52 @@
             />GitHub</a
           >
         </div>
-        <p>Coded and maintained<br />by RichardDorian</p>
+        <p data-lang="login-text-credits"></p>
       </div>
     </div>
     <div id="main-menu-page" class="page">
       <link rel="stylesheet" href="css/pages/mainMenu.css" />
-      <script defer src="scripts/pages/mainMenu.js"></script>
+      <script defer src="scripts/components/MainMenuItem.js"></script>
       <div id="header">
         <h2>
-          Hi, <span id="username"></span>
+          Hi,
+          <span id="username"></span>
           <img src="assets/images/hello.png" alt="Hello" height="30" />
         </h2>
         <img src="assets/images/settings.png" alt="Settings" height="40" />
       </div>
       <div id="content">
-        <h1>Main Menu</h1>
+        <h1 data-lang="mainmenu-text-main-menu">Main Menu</h1>
         <div id="buttons">
           <main-menu-item
             img-src="assets/images/timetable.png"
-            text="Timetable"
+            value="Timetable"
+            data-lang="mainmenu-value-timetable"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/homework.png"
-            text="Homework"
+            value="Homework"
+            data-lang="mainmenu-value-homework"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/grades.png"
-            text="Grades"
+            value="Grades"
+            data-lang="mainmenu-value-grades"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/menu.png"
-            text="Menu"
+            value="Menu"
+            data-lang="mainmenu-value-menu"
           ></main-menu-item>
           <main-menu-item
             img-src="assets/images/teachers.png"
-            text="Teachers"
+            value="Teachers"
+            data-lang="mainmenu-value-teachers"
           ></main-menu-item>
         </div>
       </div>
     </div>
+    <div id="settings-page" class="page"></div>
     <div id="timetable-page" class="page"></div>
     <div id="homework-page" class="page"></div>
     <div id="grades-page" class="page"></div>

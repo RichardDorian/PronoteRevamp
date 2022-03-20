@@ -6,7 +6,7 @@ helloText.innerText = username;
 // Main Menu Item Component
 class MainMenuItem extends HTMLElement {
   imgSrc = 'assets/images/hello.png';
-  text = 'Button';
+  value = 'Button';
 
   constructor() {
     super();
@@ -18,7 +18,7 @@ class MainMenuItem extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['img-src', 'text'];
+    return ['img-src', 'value'];
   }
 
   /**
@@ -32,28 +32,28 @@ class MainMenuItem extends HTMLElement {
       case 'img-src':
         this.imgSrc = newValue;
         break;
-      case 'text':
-        this.text = newValue;
+      case 'value':
+        this.value = newValue;
         break;
       default:
         break;
     }
 
     /**
-     * No need to re render because the connectedCallback() method
-     * is called after the attributes are set
+     * We need to re render the the component because translations
+     * can update the fields after the component is rendered
      */
-    // this.render();
+    this.render();
   }
 
   render() {
     this.root.innerHTML = `
       <style>
-        @import url(/css/pages/mainMenuItem.css);
+        @import url(css/pages/mainMenuItem.css);
       </style>
       <div class="container">
         <img src="${this.imgSrc}" alt="${this.title}" />
-        <h2>${this.text}</h2>
+        <h2>${this.value}</h2>
       </div>
     `;
   }

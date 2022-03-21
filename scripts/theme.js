@@ -26,6 +26,9 @@ if (savedTheme) {
 function applyTheme(theme = pageTheme, saveToStorage = false) {
   console.debug('Applying theme:', theme);
   document.getElementsByTagName('html')[0].setAttribute('data-theme', theme);
+  document
+    .querySelector('meta[name="theme-color"]')
+    .setAttribute('content', theme === 'light' ? '#ffffff' : '#000000');
 
   if (saveToStorage) localStorage.setItem('theme', theme);
 }

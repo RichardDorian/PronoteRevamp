@@ -29,6 +29,7 @@
   <body>
     <!-- Components used in more than one page -->
     <script src="scripts/components/SubMenuHeader.js"></script>
+    <script src="scripts/components/TitledSeparator.js"></script>
     <!-- Pages -->
     <div id="login-page" class="page">
       <link rel="stylesheet" href="css/pages/login.css" />
@@ -115,7 +116,16 @@
       </div>
     </div>
     <div id="settings-page" class="page">
+      <link rel="stylesheet" href="css/pages/settings.css" />
       <sub-menu-header data-lang="settings-value-title"></sub-menu-header>
+      <titled-separator
+        data-lang="settings-value-application"
+        margin="50 0"
+      ></titled-separator>
+      <titled-separator
+        data-lang="settings-value-notifications"
+        margin="50 0"
+      ></titled-separator>
     </div>
     <div id="timetable-page" class="page">
       <sub-menu-header data-lang="timetable-value-title"></sub-menu-header>

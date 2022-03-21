@@ -1,0 +1,55 @@
+div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div > div {
+  background-color: var(--color-accent);
+  height: 2px;
+  width: 100%;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: -15px;
+  color: var(--color-accent);
+  /* 
+  Why isn't this a thing???
+  Used this snippet to generate the thing below: https://stackoverflow.com/a/69196391
+  */
+  text-shadow: 5px 0px 0 var(--color-background),
+    4.903926402016152px 0.9754516100806412px 0 var(--color-background),
+    4.619397662556434px 1.913417161825449px 0 var(--color-background),
+    4.157348061512726px 2.777851165098011px 0 var(--color-background),
+    3.5355339059327378px 3.5355339059327373px 0 var(--color-background),
+    2.7778511650980113px 4.157348061512726px 0 var(--color-background),
+    1.9134171618254492px 4.619397662556434px 0 var(--color-background),
+    0.9754516100806416px 4.903926402016152px 0 var(--color-background),
+    3.061616997868383e-16px 5px 0 var(--color-background),
+    -0.975451610080641px 4.903926402016152px 0 var(--color-background),
+    -1.9134171618254485px 4.619397662556434px 0 var(--color-background),
+    -2.77785116509801px 4.157348061512726px 0 var(--color-background),
+    -3.5355339059327373px 3.5355339059327378px 0 var(--color-background),
+    -4.157348061512726px 2.777851165098011px 0 var(--color-background),
+    -4.619397662556434px 1.9134171618254494px 0 var(--color-background),
+    -4.903926402016152px 0.9754516100806431px 0 var(--color-background),
+    -5px 6.123233995736766e-16px 0 var(--color-background),
+    -4.903926402016152px -0.9754516100806419px 0 var(--color-background),
+    -4.619397662556434px -1.9134171618254483px 0 var(--color-background),
+    -4.157348061512727px -2.77785116509801px 0 var(--color-background),
+    -3.5355339059327386px -3.5355339059327373px 0 var(--color-background),
+    -2.777851165098011px -4.157348061512726px 0 var(--color-background),
+    -1.9134171618254516px -4.619397662556432px 0 var(--color-background),
+    -0.9754516100806433px -4.903926402016151px 0 var(--color-background),
+    -9.184850993605148e-16px -5px 0 var(--color-background),
+    0.9754516100806415px -4.903926402016152px 0 var(--color-background),
+    1.91341716182545px -4.619397662556433px 0 var(--color-background),
+    2.777851165098009px -4.157348061512727px 0 var(--color-background),
+    3.535533905932737px -3.5355339059327386px 0 var(--color-background),
+    4.157348061512726px -2.777851165098011px 0 var(--color-background),
+    4.619397662556432px -1.913417161825452px 0 var(--color-background),
+    4.903926402016151px -0.9754516100806436px 0 var(--color-background);
+}

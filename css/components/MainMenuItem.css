@@ -1,7 +1,7 @@
 .container {
   height: 150px;
   width: 150px;
-  box-shadow: 0px 4px 20px var(--color-black-transparent);
+  box-shadow: 0px 4px 20px var(--color-primary-transparent);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 .container > h2 {
-  color: var(--color-black);
+  color: var(--color-primary);
   font-weight: 400;
   font-size: 18px;
   margin: 0;

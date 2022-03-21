@@ -1,4 +1,4 @@
-/** @typedef {'light'|'dark'} Theme */
+/** @typedef {'light'|'dark'|'oled'} Theme */
 
 /** @type {Theme} */
 const savedTheme = localStorage.getItem('theme');
@@ -25,10 +25,30 @@ if (savedTheme) {
  */
 function applyTheme(theme = pageTheme, saveToStorage = false) {
   console.debug('Applying theme:', theme);
-  document.getElementsByTagName('html')[0].setAttribute('data-theme', theme);
+  document.querySelector('html').setAttribute('data-theme', theme);
+
+  /**
+   * Convert the given rgb color to a hex color
+   * @see https://stackoverflow.com/a/5624139
+   * @param {number} r Red value
+   * @param {number} g Green value
+   * @param {number} b Blue value
+   * @returns {string} Hex color
+   */
+  function rgbToHex(r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+
+  const backgroundColor = getComputedStyle(document.body).getPropertyValue(
+    'background-color'
+  );
+
   document
     .querySelector('meta[name="theme-color"]')
-    .setAttribute('content', theme === 'light' ? '#ffffff' : '#000000');
+    .setAttribute(
+      'content',
+      rgbToHex(...backgroundColor.match(/\d+/g).map(Number))
+    );
 
   if (saveToStorage) localStorage.setItem('theme', theme);
 }

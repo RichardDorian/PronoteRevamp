@@ -38,6 +38,21 @@ html[data-theme='dark'] {
   --color-accent-2-transparent: #fbaf0166;
 }
 
+:root,
+html[data-theme='oled'] {
+  --color-primary: #ffffff;
+  --color-background: #000000;
+  --color-secondary: #252525;
+  --color-primary-transparent: #25252566;
+  --color-secondary-dark: #1d1d1d;
+  --color-positive-light: #53cf6f;
+  --color-positive: #33b864;
+  --color-negative: #d34a4a;
+  --color-accent: #6d96ff;
+  --color-accent-2: #fbaf01;
+  --color-accent-2-transparent: #fbaf0166;
+}
+
 body {
   background-color: var(--color-background);
 }

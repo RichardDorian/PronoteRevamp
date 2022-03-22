@@ -49,7 +49,7 @@ class TitledSeparator extends HTMLElement {
       this.margin.split(' ')[1]
     }px">
         <div></div>
-        <h3>${this.value}</h3>
+        <h2>${this.value}</h2>
       </div>
     `;
   }

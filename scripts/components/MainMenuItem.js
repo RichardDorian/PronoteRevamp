@@ -52,7 +52,7 @@ class MainMenuItem extends HTMLElement {
         @import url(css/components/MainMenuItem.css);
       </style>
       <div class="container">
-        <img src="${this.imgSrc}" alt="${this.title}" />
+        <img src="${this.imgSrc}" alt="${this.title}" height="96" width="96"  />
         <h2>${this.value}</h2>
       </div>
     `;

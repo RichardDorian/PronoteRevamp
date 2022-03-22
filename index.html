@@ -13,10 +13,11 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <link rel="apple-touch-icon" href="assets/ios/touch-icon.png" />
     <!-- Title, Manifest & Favicon -->
     <title>Pronote Revamp</title>
     <link rel="manifest" href="manifest.json" />
-    <link rel="shortcut icon" href="assets/source.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/source.svg" type="image/svg+xml" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css" />
     <!-- Brain of the app :D -->
@@ -58,6 +59,7 @@
               src="assets/images/github.png"
               alt="GitHub"
               height="25"
+              width="25"
             />GitHub</a
           >
         </div>
@@ -71,12 +73,18 @@
         <h2>
           Hi,
           <span id="username"></span>
-          <img src="assets/images/hello.png" alt="Hello" height="30" />
+          <img
+            src="assets/images/hello.png"
+            alt="Hello"
+            height="30"
+            width="30"
+          />
         </h2>
         <img
           src="assets/images/settings.png"
           alt="Settings"
           height="40"
+          width="40"
           onclick="showPage(pages.settings)"
         />
       </div>
@@ -185,6 +193,7 @@
             src="assets/images/open-in.png"
             alt="Open link"
             height="22"
+            width="22"
           />
         </h2>
       </div>

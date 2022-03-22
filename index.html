@@ -27,6 +27,7 @@
     <script defer src="scripts/theme.js"></script>
     <script defer src="scripts/pwa.js"></script>
     <script defer src="scripts/settings.js"></script>
+    <script defer src="scripts/share.js"></script>
   </head>
   <body>
     <!-- Components used in more than one page -->
@@ -80,13 +81,23 @@
             width="30"
           />
         </h2>
-        <img
-          src="assets/images/settings.png"
-          alt="Settings"
-          height="40"
-          width="40"
-          onclick="showPage(pages.settings)"
-        />
+        <div>
+          <img
+            src="assets/images/share.png"
+            alt="Settings"
+            height="40"
+            width="40"
+            data-share
+            onclick="shareApplication()"
+          />
+          <img
+            src="assets/images/settings.png"
+            alt="Settings"
+            height="40"
+            width="40"
+            onclick="showPage(pages.settings)"
+          />
+        </div>
       </div>
       <div id="content">
         <h1 data-lang="mainmenu-text-main-menu">Main Menu</h1>

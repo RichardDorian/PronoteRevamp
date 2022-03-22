@@ -46,6 +46,8 @@ const translations = {
     'grades-value-title': 'Grades',
     'menu-value-title': 'Menu',
     'teachers-value-title': 'Teachers',
+    'share-application-description':
+      'Check out the Pronote Revamp app! Better interface, better experience, notifications and more!',
   },
   fr: {
     'login-text-description':
@@ -79,6 +81,8 @@ const translations = {
     'grades-value-title': 'Notes',
     'menu-value-title': 'Menu',
     'teachers-value-title': 'Enseignants',
+    'share-application-description':
+      'Découvrez l’application Pronote Revamp ! Une interface plus belle, une expérience plus agréable, des notifications et plus !',
   },
   es: {
     'login-text-description':
@@ -112,6 +116,8 @@ const translations = {
     'grades-value-title': 'Notas',
     'menu-value-title': 'Menú',
     'teachers-value-title': 'Profesores',
+    'share-application-description':
+      'Descubra la aplicación Pronote Revamp ! Una interfaz más bonita, una experiencia más agradable, notificaciones y más !',
   },
 };
 

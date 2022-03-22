@@ -1,0 +1,26 @@
+#settings-page > .settings-container {
+  width: 90%;
+  margin: 15px auto 0 auto;
+}
+
+#settings-page > .settings-container > .settings-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.setting-title {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.settings-select {
+  background-color: var(--color-background);
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-primary);
+}

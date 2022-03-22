@@ -7,11 +7,21 @@ const savedTheme = localStorage.getItem('theme');
 let pageTheme = 'light'; // Light by default
 
 // If the user device is in black mode
-if (
-  window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches
-)
-  pageTheme = 'dark';
+
+/**
+ * Get the user device theme
+ * @returns {'light'|'dark'} Theme, whether `dark` or `light`
+ */
+function getUserDeviceTheme() {
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  )
+    return 'dark';
+  else return 'light';
+}
+
+pageTheme = getUserDeviceTheme();
 
 if (savedTheme) {
   console.info('Using user selected theme:', savedTheme);

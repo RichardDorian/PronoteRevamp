@@ -25,6 +25,7 @@
     <script defer src="scripts/navigation.js"></script>
     <script defer src="scripts/theme.js"></script>
     <script defer src="scripts/pwa.js"></script>
+    <script defer src="scripts/settings.js"></script>
   </head>
   <body>
     <!-- Components used in more than one page -->
@@ -122,6 +123,52 @@
         data-lang="settings-value-application"
         margin="50 0"
       ></titled-separator>
+      <div class="settings-container">
+        <div id="settings-application-theme" class="settings-item">
+          <h3 data-lang="settings-text-theme" class="setting-title"></h3>
+          <select
+            name="settings-theme"
+            class="settings-select"
+            onchange="settingsMutator.setTheme(this.value)"
+          >
+            <option
+              value="system"
+              data-lang="settings-text-theme-system"
+            ></option>
+            <option
+              value="light"
+              data-lang="settings-text-theme-light"
+            ></option>
+            <option value="dark" data-lang="settings-text-theme-dark"></option>
+            <option value="oled" data-lang="settings-text-theme-oled"></option>
+          </select>
+        </div>
+        <div id="settings-application-language" class="settings-item">
+          <h3 data-lang="settings-text-language" class="setting-title"></h3>
+          <select
+            name="settings-theme"
+            class="settings-select"
+            onchange="settingsMutator.setLanguage(this.value)"
+          >
+            <option
+              value="system"
+              data-lang="settings-text-language-system"
+            ></option>
+            <option
+              value="fr"
+              data-lang="settings-text-language-french"
+            ></option>
+            <option
+              value="en"
+              data-lang="settings-text-language-english"
+            ></option>
+            <option
+              value="es"
+              data-lang="settings-text-language-spanish"
+            ></option>
+          </select>
+        </div>
+      </div>
       <titled-separator
         data-lang="settings-value-notifications"
         margin="50 0"

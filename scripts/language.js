@@ -15,9 +15,20 @@ const translations = {
     'mainmenu-value-grades': 'Grades',
     'mainmenu-value-menu': 'Menu',
     'mainmenu-value-teachers': 'Teachers',
+    // Settings
     'settings-value-title': 'Settings',
     'settings-value-application': 'Application',
     'settings-value-notifications': 'Notifications',
+    'settings-text-theme': 'Theme',
+    'settings-text-theme-system': 'System default',
+    'settings-text-theme-light': 'Light',
+    'settings-text-theme-dark': 'Dark',
+    'settings-text-theme-oled': 'OLED',
+    'settings-text-language': 'Language',
+    'settings-text-language-system': 'System default',
+    'settings-text-language-french': 'French',
+    'settings-text-language-english': 'English',
+    'settings-text-language-spanish': 'Spanish',
     'timetable-value-title': 'Timetable',
     'homework-value-title': 'Homework',
     'grades-value-title': 'Grades',
@@ -40,6 +51,16 @@ const translations = {
     'settings-value-title': 'Paramètres',
     'settings-value-application': 'Application',
     'settings-value-notifications': 'Notifications',
+    'settings-text-theme': 'Thème',
+    'settings-text-theme-system': 'Défaut système',
+    'settings-text-theme-light': 'Clair',
+    'settings-text-theme-dark': 'Sombre',
+    'settings-text-theme-oled': 'OLED',
+    'settings-text-language': 'Langue',
+    'settings-text-language-system': 'Défaut système',
+    'settings-text-language-french': 'Français',
+    'settings-text-language-english': 'Anglais',
+    'settings-text-language-spanish': 'Espagnol',
     'timetable-value-title': 'E.D.T.',
     'homework-value-title': 'Devoirs',
     'grades-value-title': 'Notes',
@@ -62,6 +83,16 @@ const translations = {
     'settings-value-title': 'Ajustes',
     'settings-value-application': 'Aplicación',
     'settings-value-notifications': 'Notificaciones',
+    'settings-text-theme': 'Tema',
+    'settings-text-theme-system': 'Por defecto del sistema',
+    'settings-text-theme-light': 'Claro',
+    'settings-text-theme-dark': 'Oscuro',
+    'settings-text-theme-oled': 'OLED',
+    'settings-text-language': 'Idioma',
+    'settings-text-language-system': 'Por defecto del sistema',
+    'settings-text-language-french': 'Francés',
+    'settings-text-language-english': 'Inglés',
+    'settings-text-language-spanish': 'Español',
     'timetable-value-title': 'Horario',
     'homework-value-title': 'Tareas',
     'grades-value-title': 'Notas',
@@ -75,10 +106,19 @@ const translations = {
 /** @type {Language} */
 let language = 'en';
 
-// Get user device language
-['en', 'fr', 'es'].forEach((l) => {
-  if (navigator.language.includes(l)) language = l;
-});
+/**
+ * Get user device language
+ * @returns {Language} User device language (defaults to `en`)
+ */
+function getSystemLanguage() {
+  let language = 'en';
+  ['en', 'fr', 'es'].forEach((l) => {
+    if (navigator.language.includes(l)) language = l;
+  });
+  return language;
+}
+
+language = getSystemLanguage();
 
 // Get language from local storage
 /** @type {Language} */
@@ -91,11 +131,20 @@ console.info('User language:', language);
 /**
  * Set a new language
  * @param {Language} lang Language to set
+ @param {boolean} saveToStorage Whether or not to save the language to local storage
  */
-function setLanguage(lang) {
+function setLanguage(lang, saveToStorage = false) {
   language = lang;
   document.getElementsByTagName('html')[0].lang = language;
-  localStorage.setItem('language', language);
+  if (saveToStorage) localStorage.setItem('language', language);
+  translatePage();
+}
+
+/**
+ * Remove the saved language from the local storage
+ */
+function deleteSavedLanguage() {
+  localStorage.removeItem('language');
   translatePage();
 }
 

@@ -6,7 +6,6 @@ const dayDivs = document.querySelectorAll(
 
 /** Current day of the week */
 let currentSelectedDay = new Date().getDay();
-currentSelectedDay = 6;
 
 // Mark the current day as active
 if (currentSelectedDay < 6) {

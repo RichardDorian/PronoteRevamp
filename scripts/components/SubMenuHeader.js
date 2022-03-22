@@ -41,7 +41,7 @@ class SubMenuHeader extends HTMLElement {
         @import url(css/components/SubMenuHeader.css);
       </style>
       <div>
-        <img src="assets/images/back.png" height="40" onclick="showPage(pages.mainMenu)">
+        <img src="assets/images/back.png" alt="Back button" height="40" onclick="showPage(pages.mainMenu)">
         <h1>${this.value}</h1>
       </div>
     `;

@@ -175,7 +175,64 @@
       ></titled-separator>
     </div>
     <div id="timetable-page" class="page">
+      <link rel="stylesheet" href="css/pages/timetable.css" />
+      <script defer src="scripts/pages/timetable.js"></script>
+      <script defer src="scripts/components/TimetableItem.js"></script>
       <sub-menu-header data-lang="timetable-value-title"></sub-menu-header>
+      <div id="timetable-days-container">
+        <div
+          class="timetable-day-item"
+          data-lang="timetable-text-days-monday-short"
+          data-day="monday"
+        ></div>
+        <div
+          class="timetable-day-item"
+          data-lang="timetable-text-days-tuesday-short"
+          data-day="tuesday"
+        ></div>
+        <div
+          class="timetable-day-item"
+          data-lang="timetable-text-days-wednesday-short"
+          data-day="wednesday"
+        ></div>
+        <div
+          class="timetable-day-item"
+          data-lang="timetable-text-days-thursday-short"
+          data-day="thursday"
+        ></div>
+        <div
+          class="timetable-day-item"
+          data-lang="timetable-text-days-friday-short"
+          data-day="friday"
+        ></div>
+      </div>
+      <div id="timetable-separator"></div>
+      <div id="timetable-content">
+        <timetable-item
+          starting-time="10:15 AM"
+          subject="Engineering science"
+          room="Labo SI (I110-120-130)"
+        ></timetable-item>
+        <timetable-item
+          starting-time="12:05 PM"
+          subject="Break"
+          room="Cafeteria"
+          color="#CBB8E9"
+          special="true"
+        ></timetable-item>
+        <timetable-item
+          starting-time="13:55 PM"
+          subject="Mathematics"
+          room="C311 INFO"
+          color="#F9AABD"
+        ></timetable-item>
+        <timetable-item
+          starting-time="13:55 PM"
+          subject="French"
+          room="SALLE THEORIE THEATRE"
+          color="#F7C679"
+        ></timetable-item>
+      </div>
     </div>
     <div id="homework-page" class="page">
       <sub-menu-header data-lang="homework-value-title"></sub-menu-header>

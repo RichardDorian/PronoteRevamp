@@ -1,0 +1,36 @@
+#timetable-page > #timetable-days-container {
+  width: 90%;
+  margin: 45px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timetable-day-item {
+  /* Text */
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 50px;
+
+  /* Container */
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--color-background);
+}
+
+.timetable-day-item.active {
+  color: var(--color-background);
+  background-color: var(--color-accent-2);
+  filter: drop-shadow(0px 4px 15px var(--color-accent-2-transparent));
+}
+
+#timetable-page > #timetable-separator {
+  height: 1px;
+  width: 90%;
+  background-color: var(--color-secondary);
+  margin: 25px auto 0 auto;
+}
+
+#timetable-page > #timetable-content {
+  margin-top: 25px;
+}

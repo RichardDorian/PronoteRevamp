@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+
+div#container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto 10px auto;
+}
+
+div#container.special {
+  width: calc(width - 4px);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+div#container > div {
+  width: 80%;
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}

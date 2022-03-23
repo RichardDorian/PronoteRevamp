@@ -10,3 +10,5 @@ function fetchCallback(event) {
 }
 
 self.addEventListener('fetch', fetchCallback);
+
+// self.addEventListener('push', () => {});

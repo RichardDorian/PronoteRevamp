@@ -50,8 +50,8 @@ const settingsMutator = {
 
     localStorage.setItem('disableShareButtons', newState);
 
-    console.log(newState);
     setShareButtonsVisibility(newState);
+    console.debug('Share buttons visibility:', newState);
   },
 };
 

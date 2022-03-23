@@ -18,11 +18,10 @@ function showPage(page, addToHistory = true) {
   if (!page.classList.contains('page'))
     return console.error("Can't show a non-page element");
 
-  for (const key in pages) {
-    /** @type {HTMLElement} */
-    const page = pages[key];
-    page.style.display = 'none';
-  }
+  for (const key in pages)
+    if (Object.hasOwnProperty.call(pages, key))
+      pages[key].style.display = 'none';
+
   page.style.display = 'block';
 
   // Handling back button
@@ -34,7 +33,6 @@ function showPage(page, addToHistory = true) {
         ? '/?page=mainMenu'
         : `/?page=${page.id.replace('-page', '')}`
     );
-  console.log(addToHistory);
 
   console.debug('Showing page', page);
 }
@@ -68,8 +66,7 @@ showQueryPage(false);
 
 /**
  * Triggered when user is pressing the back button while without leaving the app
- * @param {PopStateEvent} event Event
  */
-window.onpopstate = (event) => {
+window.onpopstate = () => {
   showQueryPage(false);
 };

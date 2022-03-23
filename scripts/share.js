@@ -1,5 +1,5 @@
 // Checking if Share API is supported
-if (!'share' in navigator) {
+if (!('share' in navigator)) {
   // Force removing all share buttons
   document
     .querySelectorAll('[data-share]')

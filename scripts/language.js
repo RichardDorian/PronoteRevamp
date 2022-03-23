@@ -160,11 +160,11 @@ let language = 'en';
  * @returns {Language} User device language (defaults to `en`)
  */
 function getSystemLanguage() {
-  let language = 'en';
+  let lang = 'en';
   ['en', 'fr', 'es'].forEach((l) => {
-    if (navigator.language.includes(l)) language = l;
+    if (navigator.language.includes(l)) lang = l;
   });
-  return language;
+  return lang;
 }
 
 language = getSystemLanguage();
@@ -176,6 +176,28 @@ if (overrideLanguage) language = overrideLanguage;
 document.getElementsByTagName('html')[0].lang = language;
 
 console.info('User language:', language);
+
+/**
+ * Translate the given element to the current language
+ * @param {HTMLElement} element Element to translate
+ */
+function translateElement(element) {
+  const key = element.getAttribute('data-lang');
+  const property = key.split('-')[1];
+
+  if (property === 'text') element.innerText = translations[language][key];
+  else element.setAttribute(property, translations[language][key]);
+}
+
+/**
+ * Translate all elements with the data-lang attribute
+ */
+function translatePage() {
+  console.debug('Translating page...');
+  document.querySelectorAll('[data-lang]').forEach((e) => translateElement(e));
+}
+
+translatePage();
 
 /**
  * Set a new language
@@ -196,25 +218,3 @@ function deleteSavedLanguage() {
   localStorage.removeItem('language');
   translatePage();
 }
-
-/**
- * Translate all elements with the data-lang attribute
- */
-function translatePage() {
-  console.debug('Translating page...');
-  document.querySelectorAll('[data-lang]').forEach((e) => translateElement(e));
-}
-
-/**
- * Translate the given element to the current language
- * @param {HTMLElement} element Element to translate
- */
-function translateElement(element) {
-  const key = element.getAttribute('data-lang');
-  const property = /\-[a-z]*\-/.exec(key)[0].replace(/\-/g, '');
-
-  if (property === 'text') element.innerText = translations[language][key];
-  else element.setAttribute(property, translations[language][key]);
-}
-
-translatePage();

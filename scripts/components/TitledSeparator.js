@@ -1,12 +1,12 @@
 // Titled Separator Component
 class TitledSeparator extends HTMLElement {
-  value = 'Separator';
-  /** Represents the `margin-top` and `margin-bottom` css values (space separated) */
-  margin = '0 0';
-
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });
+
+    this.value = 'Separator';
+    /** Represents the `margin-top` and `margin-bottom` css values (space separated) */
+    this.margin = '0 0';
 
     this.render();
   }
@@ -40,6 +40,9 @@ class TitledSeparator extends HTMLElement {
     this.render();
   }
 
+  /**
+   * Render the component
+   */
   render() {
     this.root.innerHTML = `
       <style>

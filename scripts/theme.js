@@ -13,12 +13,10 @@ let pageTheme = 'light'; // Light by default
  * @returns {'light'|'dark'} Theme, whether `dark` or `light`
  */
 function getUserDeviceTheme() {
-  if (
-    window.matchMedia &&
+  return window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
-    return 'dark';
-  else return 'light';
+    ? 'dark'
+    : 'light';
 }
 
 pageTheme = getUserDeviceTheme();
@@ -46,7 +44,8 @@ function applyTheme(theme = pageTheme, saveToStorage = false) {
    * @returns {string} Hex color
    */
   function rgbToHex(r, g, b) {
-    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return `"${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+    // return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   }
 
   const backgroundColor = getComputedStyle(document.body).getPropertyValue(

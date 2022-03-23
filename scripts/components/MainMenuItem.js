@@ -5,15 +5,13 @@ helloText.innerText = username;
 
 // Main Menu Item Component
 class MainMenuItem extends HTMLElement {
-  imgSrc = 'assets/images/hello.png';
-  value = 'Button';
-
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });
-  }
 
-  connectedCallback() {
+    this.imgSrc = 'assets/images/hello.png';
+    this.value = 'Button';
+
     this.render();
   }
 
@@ -46,6 +44,9 @@ class MainMenuItem extends HTMLElement {
     this.render();
   }
 
+  /**
+   * Render the component
+   */
   render() {
     this.root.innerHTML = `
       <style>

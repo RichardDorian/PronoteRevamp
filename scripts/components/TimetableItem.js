@@ -1,14 +1,14 @@
 // Timetable Item Component
 class TimetableItem extends HTMLElement {
-  startingTime = '00:00 AM';
-  color = '#84a2d4';
-  subject = 'Subject';
-  room = '100';
-  isSpecial = false;
-
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });
+
+    this.startingTime = '00:00 AM';
+    this.color = '#84a2d4';
+    this.subject = 'Subject';
+    this.room = '100';
+    this.isSpecial = false;
 
     this.render();
   }
@@ -51,6 +51,9 @@ class TimetableItem extends HTMLElement {
     this.render();
   }
 
+  /**
+   * Render the component
+   */
   render() {
     const specialCssText = this.isSpecial
       ? `style="color: ${this.color}"`

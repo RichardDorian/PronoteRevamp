@@ -10,7 +10,7 @@ let currentSelectedDay = new Date().getDay();
 // Mark the current day as active
 if (currentSelectedDay < 6) {
   // Ignoring Saturday and Sunday
-  let currentDayDiv = dayDivs[currentSelectedDay - 1];
+  const currentDayDiv = dayDivs[currentSelectedDay - 1];
   currentDayDiv.classList.add('active');
 } else {
   dayDivs[0].classList.add('active');
@@ -36,11 +36,11 @@ const timetable = {
    */
   setActiveDay: (day) => {
     // Remove the active class from the current day
-    let currentDayDiv = dayDivs[currentSelectedDay - 1];
+    const currentDayDiv = dayDivs[currentSelectedDay - 1];
     currentDayDiv.classList.remove('active');
 
     // Add the active class to the new day
-    let newDayDiv = dayDivs[DayMap[day] - 1];
+    const newDayDiv = dayDivs[DayMap[day] - 1];
     newDayDiv.classList.add('active');
     currentSelectedDay = DayMap[day];
   },

@@ -1,10 +1,10 @@
 // Sub Menu Header Component
 class SubMenuHeader extends HTMLElement {
-  value = 'Sub Menu';
-
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });
+
+    this.value = 'Sub Menu';
 
     this.render();
   }
@@ -35,6 +35,9 @@ class SubMenuHeader extends HTMLElement {
     this.render();
   }
 
+  /**
+   * Render the component
+   */
   render() {
     this.root.innerHTML = `
       <style>

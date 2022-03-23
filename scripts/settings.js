@@ -41,6 +41,18 @@ const settingsMutator = {
         break;
     }
   },
+  /**
+   * Toggle the share buttons visibility (hide/show them depending on the current state)
+   */
+  toggleShareButtonVisibility: () => {
+    const savedState = localStorage.getItem('disableShareButtons') === 'true';
+    const newState = !savedState;
+
+    localStorage.setItem('disableShareButtons', newState);
+
+    console.log(newState);
+    setShareButtonsVisibility(newState);
+  },
 };
 
 // Loading all the settings
@@ -52,4 +64,21 @@ if (savedTheme) {
       `#settings-application-theme > select[name="settings-theme"] > option[value="${savedTheme}"]`
     )
     .setAttribute('selected', true);
+}
+
+// Language
+if (overrideLanguage) {
+  document
+    .querySelector(
+      `#settings-application-language > select[name="settings-language"] > option[value="${overrideLanguage}"]`
+    )
+    .setAttribute('selected', true);
+}
+
+// Share buttons
+if (localStorage.getItem('disableShareButtons') === 'true') {
+  document
+    .querySelector('#settings-application-share-buttons > input[type=checkbox]')
+    .setAttribute('checked', true);
+  setShareButtonsVisibility(true);
 }

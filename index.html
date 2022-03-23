@@ -26,8 +26,8 @@
     <script defer src="scripts/navigation.js"></script>
     <script defer src="scripts/theme.js"></script>
     <script defer src="scripts/pwa.js"></script>
-    <script defer src="scripts/settings.js"></script>
     <script defer src="scripts/share.js"></script>
+    <script defer src="scripts/settings.js"></script>
   </head>
   <body>
     <!-- Components used in more than one page -->
@@ -84,7 +84,7 @@
         <div>
           <img
             src="assets/images/share.png"
-            alt="Settings"
+            alt="Share Application"
             height="40"
             width="40"
             data-share
@@ -165,7 +165,7 @@
         <div id="settings-application-language" class="settings-item">
           <h3 data-lang="settings-text-language" class="setting-title"></h3>
           <select
-            name="settings-theme"
+            name="settings-language"
             class="settings-select"
             onchange="settingsMutator.setLanguage(this.value)"
           >
@@ -186,6 +186,18 @@
               data-lang="settings-text-language-spanish"
             ></option>
           </select>
+        </div>
+        <div id="settings-application-share-buttons" class="settings-item">
+          <h3
+            data-lang="settings-text-share-buttons"
+            class="setting-title"
+          ></h3>
+          <input
+            type="checkbox"
+            name="disable-share-buttons"
+            class="settings-checkbox"
+            onchange="settingsMutator.toggleShareButtonVisibility()"
+          />
         </div>
       </div>
       <titled-separator

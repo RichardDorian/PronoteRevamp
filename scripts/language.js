@@ -30,6 +30,7 @@ const translations = {
     'settings-text-language-french': 'French',
     'settings-text-language-english': 'English',
     'settings-text-language-spanish': 'Spanish',
+    'settings-text-share-buttons': 'Hide share buttons',
     // Time table
     'timetable-value-title': 'Timetable',
     'timetable-text-days-monday-short': 'Mon',
@@ -76,6 +77,7 @@ const translations = {
     'settings-text-language-french': 'Français',
     'settings-text-language-english': 'Anglais',
     'settings-text-language-spanish': 'Espagnol',
+    'settings-text-share-buttons': 'Cacher les boutons de partage',
     'timetable-value-title': 'E.D.T.',
     'timetable-text-days-monday-short': 'Lun',
     'timetable-text-days-tuesday-short': 'Mar',
@@ -121,6 +123,7 @@ const translations = {
     'settings-text-language-french': 'Francés',
     'settings-text-language-english': 'Inglés',
     'settings-text-language-spanish': 'Español',
+    'settings-text-share-buttons': 'Ocultar los botones de compartir',
     'timetable-value-title': 'Horario',
     'timetable-text-days-monday-short': 'Lun',
     'timetable-text-days-tuesday-short': 'Mar',

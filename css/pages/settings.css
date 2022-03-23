@@ -24,3 +24,7 @@
   font-size: 14px;
   color: var(--color-primary);
 }
+
+.settings-checkbox {
+  margin-top: 6px;
+}

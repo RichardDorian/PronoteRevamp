@@ -22,6 +22,7 @@ function setShareButtonsVisibility(hidden) {
     if (hidden) return element.classList.add('hidden');
     element.classList.remove('hidden');
   });
+  console.debug('Share buttons visibility:', !hidden);
 }
 
 /**

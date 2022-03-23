@@ -18,7 +18,6 @@ const settingsMutator = {
       default:
         // Normal theme handling
         applyTheme(theme, true);
-        console.debug('Applying theme:', theme);
         break;
     }
   },
@@ -51,7 +50,6 @@ const settingsMutator = {
     localStorage.setItem('disableShareButtons', newState);
 
     setShareButtonsVisibility(newState);
-    console.debug('Share buttons visibility:', newState);
   },
 };
 

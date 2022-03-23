@@ -39,7 +39,7 @@ html[data-theme='dark'] {
 }
 
 :root,
-html[data-theme='oled'] {
+html[data-theme='amoled'] {
   --color-primary: #ffffff;
   --color-background: #000000;
   --color-secondary: #7e7e7e;

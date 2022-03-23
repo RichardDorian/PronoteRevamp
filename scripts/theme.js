@@ -1,4 +1,4 @@
-/** @typedef {'light'|'dark'|'oled'} Theme */
+/** @typedef {'light'|'dark'|'amoled'} Theme */
 
 /** @type {Theme} */
 const savedTheme = localStorage.getItem('theme');

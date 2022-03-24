@@ -217,9 +217,7 @@ const timetable = {
    * @param {Day} day Day to get the timetable for
    */
   renderDay: (day) => {
-    const timetableForDay = timetables.find(
-      (timetable) => timetable.day === day
-    );
+    const timetableForDay = timetables.find((t) => t.day === day);
     if (!timetableForDay) return console.warn('No timetable for this day');
     timetable.renderTimetable(timetableForDay);
   },

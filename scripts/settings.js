@@ -24,19 +24,19 @@ const settingsMutator = {
   /**
    * Set the given language to the page (used by settings page only)
    * @see setLanguage Method to call when you want to set the new theme, do not use this one
-   * @param {'system'|Language} language Language to set
+   * @param {'system'|Language} lang Language to set
    */
-  setLanguage: (language) => {
-    switch (language) {
+  setLanguage: (lang) => {
+    switch (lang) {
       case 'system':
         // Remove saved language + apply system default (without saving to local storage)
-        deleteSavedLanguage();
-        setLanguage(getSystemLanguage());
+        language.deleteSavedLanguage();
+        language.setLanguage(getSystemLanguage());
         break;
 
       default:
         // Normal language handling
-        setLanguage(language, true);
+        language.setLanguage(lang, true);
         break;
     }
   },

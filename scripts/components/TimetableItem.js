@@ -5,7 +5,7 @@ class TimetableItem extends HTMLElement {
     this.root = this.attachShadow({ mode: 'open' });
 
     this.startingTime = '00:00 AM';
-    this.color = '#84a2d4';
+    this.color = timetable.colors.red;
     this.subject = 'Subject';
     this.room = '100';
     this.isSpecial = false;

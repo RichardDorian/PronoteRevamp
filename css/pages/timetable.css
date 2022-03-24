@@ -22,6 +22,11 @@
   color: var(--color-background);
   background-color: var(--color-accent-2);
   filter: drop-shadow(0px 4px 15px var(--color-accent-2-transparent));
+  z-index: 1;
+}
+
+#timetable-page > input[name='timetable-week-selector'] {
+  display: none;
 }
 
 #timetable-page > #timetable-separator {

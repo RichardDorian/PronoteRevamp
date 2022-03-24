@@ -151,16 +151,6 @@ const dayDivs = document.querySelectorAll(
 /** Current day of the week */
 let currentSelectedDay = new Date().getDay();
 
-// Mark the current day as active
-if (currentSelectedDay < 6) {
-  // Ignoring Saturday and Sunday
-  const currentDayDiv = dayDivs[currentSelectedDay - 1];
-  currentDayDiv.classList.add('active');
-} else {
-  dayDivs[0].classList.add('active');
-  currentSelectedDay = 1;
-}
-
 /** Object to map numbers and days */
 const DayMap = {
   monday: 1,
@@ -168,6 +158,11 @@ const DayMap = {
   wednesday: 3,
   thursday: 4,
   friday: 5,
+  1: 'monday',
+  2: 'tuesday',
+  3: 'wednesday',
+  4: 'thursday',
+  5: 'friday',
 };
 
 /**
@@ -230,4 +225,13 @@ dayDivs.forEach((dayDiv) => {
   });
 });
 
-timetable.renderDay('monday');
+// Mark the current day as active
+if (currentSelectedDay < 6) {
+  // Ignoring Saturday and Sunday
+  const currentDayDiv = dayDivs[currentSelectedDay - 1];
+  currentDayDiv.classList.add('active');
+} else {
+  dayDivs[0].classList.add('active');
+  currentSelectedDay = 1;
+}
+timetable.renderDay(DayMap[currentSelectedDay.toString()]);

@@ -7,7 +7,7 @@ const settingsMutator = {
    * @see applyTheme Method to call when you want to set the new theme, do not use this one
    * @param {'system'|Theme} theme Theme to apply
    */
-  setTheme: (theme) => {
+  setTheme(theme) {
     switch (theme) {
       case 'system':
         // Remove saved theme + apply system default (without saving to local storage)
@@ -26,7 +26,7 @@ const settingsMutator = {
    * @see setLanguage Method to call when you want to set the new theme, do not use this one
    * @param {'system'|Language} lang Language to set
    */
-  setLanguage: (lang) => {
+  setLanguage(lang) {
     switch (lang) {
       case 'system':
         // Remove saved language + apply system default (without saving to local storage)
@@ -43,7 +43,7 @@ const settingsMutator = {
   /**
    * Toggle the share buttons visibility (hide/show them depending on the current state)
    */
-  toggleShareButtonVisibility: () => {
+  toggleShareButtonVisibility() {
     const savedState = localStorage.getItem('disableShareButtons') === 'true';
     const newState = !savedState;
 

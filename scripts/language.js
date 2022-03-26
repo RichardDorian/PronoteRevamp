@@ -12,7 +12,7 @@ const language = {
    * Get user device language
    * @returns {Language} User device language (defaults to `en`)
    */
-  getSystemLanguage: () => {
+  getSystemLanguage() {
     let lang = 'en';
     ['en', 'fr', 'es'].forEach((l) => {
       if (navigator.language.includes(l)) lang = l;
@@ -23,7 +23,7 @@ const language = {
    * Fetch a language file
    * @param {Language} lang Lang to fetch
    */
-  fetchTranslation: async (lang) => {
+  async fetchTranslation(lang) {
     console.debug(`Fetching ${lang} translation...`);
     const file = await fetch(`/lang/${lang}.json`);
     const data = await file.json();
@@ -33,7 +33,7 @@ const language = {
    * Translate the given element to the current language
    * @param {HTMLElement} element Element to translate
    */
-  translateElement: (element) => {
+  translateElement(element) {
     const key = element.getAttribute('data-lang');
     const property = key.split('-')[1];
 
@@ -44,7 +44,7 @@ const language = {
   /**
    * Translate all elements with the data-lang attribute
    */
-  translatePage: () => {
+  translatePage() {
     console.debug('Translating page...');
     document
       .querySelectorAll('[data-lang]')
@@ -55,7 +55,7 @@ const language = {
    * @param {Language} lang Language to set
    * @param {boolean} saveToStorage Whether or not to save the language to local storage
    */
-  setLanguage: async (lang, saveToStorage = false) => {
+  async setLanguage(lang, saveToStorage = false) {
     if (!Object.prototype.hasOwnProperty.call(translations, lang))
       await language.fetchTranslation(lang);
 
@@ -67,7 +67,7 @@ const language = {
   /**
    * Remove the saved language from the local storage
    */
-  deleteSavedLanguage: () => {
+  deleteSavedLanguage() {
     localStorage.removeItem('language');
     language.translatePage();
   },

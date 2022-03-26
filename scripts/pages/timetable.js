@@ -43,7 +43,7 @@ const timetable = {
    * Set the new day as active in the timetable page
    * @param {Day} day Day to set as active
    */
-  setActiveDay: (day) => {
+  setActiveDay(day) {
     // Remove the active class from the current day
     const currentDayDiv = dayDivs[timetable.currentSelectedDay - 1];
     currentDayDiv.classList.remove('active');

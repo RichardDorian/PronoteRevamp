@@ -31,7 +31,7 @@ function setShareButtonsVisibility(hidden) {
 async function shareApplication() {
   const data = {
     title: 'Pronote Revamp',
-    text: translations[language]['share-application-description'],
+    text: translations[language.language]['share-application-description'],
     url: 'https://pronote.ml/?source=share',
   };
 

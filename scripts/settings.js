@@ -51,6 +51,15 @@ const settingsMutator = {
 
     setShareButtonsVisibility(newState);
   },
+  /**
+   * Toggle the reduced motion mode (disables animations)
+   */
+  toggleReducedMotion() {
+    const savedState = localStorage.getItem('reducedMotion') === 'true';
+    const newState = !savedState;
+
+    localStorage.setItem('reducedMotion', newState);
+  },
 };
 
 // Loading all the settings
@@ -79,4 +88,21 @@ if (localStorage.getItem('disableShareButtons') === 'true') {
     .querySelector('#settings-application-share-buttons > input[type=checkbox]')
     .setAttribute('checked', true);
   setShareButtonsVisibility(true);
+}
+
+// Force reduce mode if new api isn't available
+if (!document.createDocumentTransition) {
+  const element = document.querySelector(
+    '#settings-application-reduced-motion > input[type=checkbox]'
+  );
+  element.setAttribute('checked', true);
+  element.setAttribute('disabled', true);
+}
+
+if (localStorage.getItem('reducedMotion') === 'true') {
+  document
+    .querySelector(
+      '#settings-application-reduced-motion > input[type=checkbox]'
+    )
+    .setAttribute('checked', true);
 }

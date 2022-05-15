@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-transition-type="forward">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -203,6 +203,18 @@
             onchange="settingsMutator.toggleShareButtonVisibility()"
           />
         </div>
+        <div id="settings-application-reduced-motion" class="settings-item">
+          <h3
+            data-lang="settings-text-reduced-motion"
+            class="setting-title"
+          ></h3>
+          <input
+            type="checkbox"
+            name="reduce-motion"
+            class="settings-checkbox"
+            onchange="settingsMutator.toggleReducedMotion()"
+          />
+        </div>
       </div>
       <titled-separator
         data-lang="settings-value-notifications"
@@ -238,7 +250,8 @@
       ></titled-separator>
       <div class="settings-container">
         <h2 class="setting-title">
-          Icons by <a href="https://icons8.com/icons/fluency">Icons8</a>
+          Icons by
+          <a href="https://icons8.com/icons/fluency" target="_blank">Icons8</a>
           <img
             id="icons8-open-icon"
             src="assets/images/open-in.png"

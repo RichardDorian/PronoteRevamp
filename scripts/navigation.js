@@ -19,6 +19,29 @@ function showPage(page, addToHistory = true, transition = true) {
   if (!page.classList.contains('page'))
     return console.error("Can't show a non-page element");
 
+  /**
+   * Update the DOM
+   */
+  function updateDOM() {
+    for (const key in pages)
+      if (Object.hasOwnProperty.call(pages, key))
+        pages[key].style.display = 'none';
+
+    page.style.display = 'block';
+
+    // Handling back button
+    if (addToHistory)
+      window.history.pushState(
+        {},
+        '',
+        page.id.includes('main-menu-page')
+          ? '/?page=mainMenu'
+          : `/?page=${page.id.replace('-page', '')}`
+      );
+
+    console.debug('Showing page', page);
+  }
+
   // Start the transition (since it's a very new API we need to make sure it exists in the user's browser)
   if (
     document.createDocumentTransition &&
@@ -40,26 +63,6 @@ function showPage(page, addToHistory = true, transition = true) {
             .setAttribute('data-transition-type', 'backward');
       });
   } else updateDOM();
-
-  function updateDOM() {
-    for (const key in pages)
-      if (Object.hasOwnProperty.call(pages, key))
-        pages[key].style.display = 'none';
-
-    page.style.display = 'block';
-
-    // Handling back button
-    if (addToHistory)
-      window.history.pushState(
-        {},
-        '',
-        page.id.includes('main-menu-page')
-          ? '/?page=mainMenu'
-          : `/?page=${page.id.replace('-page', '')}`
-      );
-
-    console.debug('Showing page', page);
-  }
 }
 
 // Show the authentication form if the user is not authenticated
